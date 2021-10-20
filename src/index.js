@@ -27,7 +27,7 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp', 'uploads')
 
 app.use(require('./routes'));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 /**
  * https://stackoverflow.com/questions/65680842/error-mongooseerror-operation-users-insertone-buffering-timed-out-after-1
